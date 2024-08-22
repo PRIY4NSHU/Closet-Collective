@@ -1,0 +1,138 @@
+.autoshow {
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+.autoshow-r {
+    animation: autoShowAnimation-r both;
+    animation-timeline: view(70% 10%);
+    display: flex;
+    justify-content: center;
+}
+.autoshow-l {
+    animation: autoShowAnimation-l both;
+    animation-timeline: view(70% 10%);
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes autoShowAnimation-r {
+    from {
+        opacity: 0;
+        transform: translateX(-800px) scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+@keyframes autoShowAnimation-l {
+    from {
+        opacity: 0;
+        transform: translateX(800px) scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.home-bg {
+    background-color: #fdf4e3;
+}
+
+.hero-section {
+    background: linear-gradient(to right, #a41e34, #d4af37); /* Deep red to gold gradient */
+    color: white;
+    padding: 40px 20px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.hero-content h1 {
+    font-size: 48px;
+}
+
+.hero-content p {
+    font-size: 24px;
+}
+
+.cart-item-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+    padding: 15px;
+    border: 2px solid #d4af37; /* Gold */
+    border-radius: 8px;
+    background-color: #fffbea; /* Lighter beige for contrast */
+    margin: 20px;
+    color: #a00000;
+    width: 100%;
+  }
+
+.hero-content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.home-img {
+    max-width: 500px;
+    max-height: 300px;
+    /* width: 500px;
+    height: 300px; */
+    border-radius: 10px;
+}
+
+.featured-collections {
+    background-color: #fdf4e3;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .featured-collections h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #a41e34; /* Deep red */
+  }
+  
+  .collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .collection-card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .collection-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    /* color: #d4af37; */
+  }
+  
+  .collection-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+  }

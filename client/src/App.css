@@ -1,0 +1,554 @@
+/* src/App.css */
+nav {
+  background-color: #a00000;
+  padding: 2rem;
+  width: 100%;
+}
+
+.navbar-logo {
+  height: 70px; /* Adjust the size of the logo */
+  padding-left: 20px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  /* padding: 0 0 0 20px; */
+  background-color: #a00000; /* Adjust as needed */
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  color: #fff;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: large;
+}
+
+nav ul li:hover {
+  font-weight: bold;
+}
+
+/* ------------------------------------------------ */
+
+/* src/pages/ViewClothes.css */
+
+.view-clothes-container {
+  padding: 20px;
+  background-color: #fffbea; /* Neutral background */
+}
+
+.view-clothes-title {
+  text-align: center;
+  color: #a00000; /* Deep red festive theme */
+}
+
+.clothes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.clothes-card {
+  background-color: #ffffff; /* Slightly off-white for a soft, festive vibe */
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clothes-name {
+  font-size: 1.5em;
+  color: #a00000; /* Deep red for titles */
+}
+
+.clothes-image {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain; /* Ensures full image visibility without cropping */
+  margin: 10px 0;
+}
+
+.clothes-description {
+  font-size: 1em;
+  color: #555; /* Neutral text color */
+}
+
+.clothes-price {
+  font-size: 1.2em;
+  color: #a00000; /* Deep red for prices */
+  margin-bottom: 10px;
+}
+
+.availability-container {
+  margin-top: 10px;
+}
+
+.availability-button, .cart-button {
+  background-color: #a00000; /* Deep red button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.cart-button:disabled {
+  background-color: #e0e0e0;
+  /* cursor: not-allowed; */
+}
+
+.availability-button:hover, .cart-button:not(:disabled):hover {
+  background-color: #b81c1c; /* Slightly darker on hover */
+}
+
+.go-to-cart-button {
+  background-color: #ffd700; /* Gold button */
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  border: none;
+}
+
+.go-to-cart-button:hover {
+  background-color: #ffcc00; /* Darker gold on hover */
+}
+
+/* ------------------------------------------------------------- */
+
+/* src/pages/UserProfile.css */
+.user-profile-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fdf4e3; /* Light beige */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-title {
+  font-size: 2rem;
+  color: #a0522d; /* Deep red */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-message {
+  font-size: 1.5rem;
+  color: #a0522d; /* Deep red */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.bookings-title {
+  font-size: 1.3rem;
+  color: #d4af37; /* Gold */
+  margin-bottom: 10px;
+}
+
+.bookings-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-header {
+  background-color: #d4af37; /* Gold */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fffbe0; /* Lighter beige for the table rows */
+  border-bottom: 1px solid #d4af37; /* Gold border for separation */
+}
+
+.table-cell {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+.header-cell {
+  font-weight: bold;
+  color: #fff;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #f7e6c7; /* Slightly darker beige for alternating rows */
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell:first-child {
+  flex: 2;
+}
+
+.table-cell:last-child {
+  text-align: right;
+  color: #a0522d; /* Deep red for status */
+}
+
+/* ---------------------------------------------------- */
+
+/* src/pages/Cart.css */
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fdf4e3; /* Light beige to match the festive theme */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-title {
+  font-size: 2rem;
+  color: #a0522d; /* Deep red or gold */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #d4af37; /* Gold */
+  border-radius: 8px;
+  background-color: #fffbe0; /* Lighter beige for contrast */
+}
+
+.cart-item-image-container {
+  width: 200px;
+  height: 200px;
+  background-color: white; /* White background inside the box */
+  border: 1px solid #d4af37; /* Gold border */
+  border-radius: 4px; /* Same border radius */
+  margin-right: 20px; /* Margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the image fits within the container without cropping */
+  border-radius: 4px; /* This will apply only to the image */
+}
+
+.cart-item-name-and-desc {
+  flex: 0 0 50%;
+}
+
+.cart-item-name {
+  font-size: 1.5rem;
+  color: #a0522d; /* Deep red or gold */
+  /* flex: 2; */
+  text-align: left;
+}
+
+.cart-item-description {
+  font-size: 1rem;
+  color: #333;
+  /* flex: 3; */
+  text-align: left;
+}
+
+.cart-item-price {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  flex: 0 0 10%;
+  display: flex;
+}
+
+.cart-item-dates {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  flex: 1;
+}
+
+.total-amount {
+  font-size: 1.3rem;
+  color: #a0522d; /* Deep red or gold */
+  text-align: center;
+  flex: 1;
+  margin-left: auto;
+}
+
+.remove-button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #a0522d; /* Deep red */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.remove-button:hover {
+  background-color: #d46a6a; /* Slightly lighter red */
+}
+
+.payment-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #d4af37; /* Gold */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.payment-button:hover {
+  background-color: #e0c065; /* Slightly lighter gold */
+}
+
+.empty-cart {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  background-color: #fffbe0; /* Match the card background */
+  border-radius: 8px;
+}
+
+/* ------------------------------------------------------- */
+
+/* src/pages/Login.css */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fdf4e3; /* Light beige */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: #a0522d; /* Deep red */
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #d4af37; /* Gold */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fffbe0; /* Light beige */
+  color: #333;
+}
+
+.form-input:focus {
+  border-color: #a0522d; /* Deep red */
+  outline: none;
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.5); /* Light shadow on focus */
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #a0522d; /* Deep red */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #8b4513; /* Darker red */
+}
+
+/* ---------------------------------------------------- */
+
+/* src/pages/Register.css */
+.register-container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fdf4e3; /* Light beige */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register-title {
+  font-size: 2rem;
+  color: #a0522d; /* Deep red */
+  margin-bottom: 20px;
+}
+
+.register-form .form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #d4af37; /* Gold */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fffbe0; /* Light beige */
+  color: #333;
+}
+
+.form-input:focus {
+  border-color: #a0522d; /* Deep red */
+  outline: none;
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.5); /* Light shadow on focus */
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #a0522d; /* Deep red */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #8b4513; /* Darker red */
+}
+
+/* ---------------------------------------------------- */
+
+/* src/pages/AddClothes.css */
+.add-clothes-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fdf4e3; /* Light beige */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-clothes-title {
+  font-size: 2rem;
+  color: #a0522d; /* Deep red */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-clothes-form .form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #d4af37; /* Gold */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fffbe0; /* Light beige */
+  color: #333;
+}
+
+.form-input:focus {
+  border-color: #a0522d; /* Deep red */
+  outline: none;
+  box-shadow: 0 0 5px rgba(160, 82, 45, 0.5); /* Light shadow on focus */
+}
+
+textarea.form-input {
+  resize: vertical;
+}
+
+.add-clothes-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #a0522d; /* Deep red */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-clothes-button:hover {
+  background-color: #8b4513; /* Darker red */
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons img {
+    margin: 0 10px;
+    cursor: pointer;
+  }
